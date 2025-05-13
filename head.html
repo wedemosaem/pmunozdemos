@@ -3,7 +3,8 @@
   console.log(`Head loading at: ${initLoadingTime}`);
 
   var isPageWithoutTagManager = document.location.href.indexOf('no-tag-manager') > 0;
-  if (!isPageWithoutTagManager) {
+  //if (!isPageWithoutTagManager) {
+  if (false) {
     const head = document.querySelector('head');
     const tagManagerScript = document.createElement('script');
     tagManagerScript.setAttribute('async', 'true');
