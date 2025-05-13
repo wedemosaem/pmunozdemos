@@ -1,0 +1,19 @@
+<script>
+  var initLoadingTime = Date.now();
+  console.log(`Head loading at: ${initLoadingTime}`);
+
+  var isPageWithoutTagManager = document.location.href.indexOf('no-tag-manager') > 0;
+  if (!isPageWithoutTagManager) {
+    const head = document.querySelector('head');
+    const tagManagerScript = document.createElement('script');
+    tagManagerScript.setAttribute('async', 'true');
+    tagManagerScript.src = 'https://assets.adobedtm.com/59610d662d36/f05648dc5d82/launch-cce4ee52a29f-development.min.js';
+    head.append(tagManagerScript);
+  }
+  
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<script src="/scripts/scripts.js" type="module"></script>
+<link rel="stylesheet" href="/styles/styles.css"/>
+<link rel="icon" href="data:,">
